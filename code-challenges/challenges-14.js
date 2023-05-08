@@ -87,11 +87,19 @@ return arr.join(" ");
 
 const arrToStr = (arr) => {
     // write your code here
+let str="";
 let arr1=[];
-for (let i = 0; i < arr.length; i+=5) {
-    arr.splice(i+5,0,",")
+    for(let i=0;i<arr.length;i+=5)
+{    arr1.push(arr.slice(i,i+5).join(" "))
 }
-return arr1.join(" ");
+if(arr.length%5===0){
+    str=arr1.join(",")+",";
+    return str;
+}
+else{
+    str=arr1.join(", ");
+  return str;
+}
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -114,7 +122,17 @@ return arr1.join(" ");
 
 const letterCounter = (str) => {
     // write your code here
-}
+    let result = "";
+    let count = 1;
+    for (let i = 0; i < str.length; i++) {
+      if (str[i] === str[i + 1]) {
+        count++;
+      } else {
+        result += str[i] + (count >= 1 && str[i]!=" " ? count : "");
+        count = 1;
+      }
+    }
+    return result;}
 // -------------------------------------------------------------------------------------------------------
 
 
