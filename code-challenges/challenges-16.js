@@ -79,7 +79,7 @@ const chickenGradients = (arr) => {
       })
       newArr.push(newArr1)
     }
-                return newArr;   
+    return newArr;   
 }
 // -------------------------------------------------------------------------------------------------------
 
