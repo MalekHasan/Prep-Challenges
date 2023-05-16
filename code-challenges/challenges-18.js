@@ -86,6 +86,13 @@ const wordLetters = (str1, str2) => {
 
 const targetIndex = (arr, int) => {
     // write your code here
+    if(arr.includes(int)){
+        return arr.indexOf(int)
+      }
+      else{
+        arr.push(int)
+        return arr.sort().indexOf(int)
+      }
 }
 // -------------------------------------------------------------------------------------------------------
 
