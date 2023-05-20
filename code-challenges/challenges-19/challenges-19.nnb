@@ -24,7 +24,7 @@
         {
             "language": "javascript",
             "source": [
-                ""
+                "function appendAndDelete(s, t, k) {\n    // Write your code here\n    let diffChar=0;\n    while(diffChar < s.length && diffChar < t.length)\n    {\n        if(s[diffChar] == t[diffChar])\n        {\n            diffChar++;\n        }\n        else{\n            break;\n        }\n    }\n    let minMoves= s.length - diffChar + t.length - diffChar;\n\n    if(k < minMoves){\n        return \"No\";\n    }\n    if(k > s.length + t.length) {\n        return \"Yes\";\n    }\n        if((k - minMoves)%2 == 0) {\n        return \"Yes\";\n    }\n    return \"No\";\n}"
             ],
             "outputs": []
         },
